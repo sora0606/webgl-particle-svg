@@ -1,0 +1,7 @@
+{
+	"printWidth": 100,
+	"order": "smacss",
+	"useTabs": true,
+	"keepOverrides": false,
+	"tailwindConfig": "./tailwind.config.js"
+}

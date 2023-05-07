@@ -1,0 +1,6 @@
+public/
+dist/
+
+.github/workflows
+.idea/workflows
+node_modules/
