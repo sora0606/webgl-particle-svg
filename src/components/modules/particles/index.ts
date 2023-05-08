@@ -36,9 +36,9 @@ class Particle {
 		this.params = {
 			guiMaxDesity: 5,
 			density: 5,
-			size: 10,
-			gradientStartColor: "#ffffff",
-			gradientEndColor: "#ffffff",
+			size: 15,
+			gradientStartColor: "#ffb30f",
+			gradientEndColor: "#fffbf0",
 			amplitude: 0, //ゆらゆら
 		};
 		this.imageSize = 2.8;
@@ -104,7 +104,7 @@ class Particle {
 		this.particle.scale.x += (scale - this.particle.scale.x) * 0.2;
 		this.particle.scale.y = this.particle.scale.z = this.particle.scale.x;
 
-		let _progress = this.progress * 1.5;
+		let _progress = this.progress * 2.2;
 		_progress = Math.min(1, _progress);
 		let ry = (1 - _progress) * Math.PI;
 		this.particle.rotation.y += (ry - this.particle.rotation.y) * 0.05;
@@ -153,8 +153,8 @@ class Particle {
 					x: basePosition.x,
 					y: basePosition.y,
 					z: basePosition.z,
-					ease: Power3.easeOut,
-					duration: 0.6,
+					ease: Power3.easeInOut,
+					duration: 0.8,
 				},
 				delay * 0.7
 			);

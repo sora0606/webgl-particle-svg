@@ -22,11 +22,11 @@ export default () => {
 			scene = new THREE.Scene();
 
 			renderer = new THREE.WebGLRenderer({
-				antialias: true,
-				alpha: true
+				antialias: true, // エッジに生じるジャギーを減らすための技術の有無
+				alpha: true // 背景を透明にするかどうか。透明にすることで複数のレンダラーを重ねて実装できる
 			});
 
-			renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+			renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2)); // デバイスピクセルとCSSピクセルの比率を設定。より高精細な描画を行うことができる
 			renderer.setSize(width, height);
 			renderer.setAnimationLoop(this.animate);
 			document.body.appendChild(renderer.domElement);
